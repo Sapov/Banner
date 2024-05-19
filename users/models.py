@@ -12,7 +12,7 @@ class Role(models.TextChoices):
     FINANCIER = "FINANCIER", "Бухгалтер"
 
 
-class User(AbstractUser):
+class Users(AbstractUser):
     role = models.CharField(
         max_length=24, choices=Role.choices, default=Role.CUSTOMER_RETAIL
     )
