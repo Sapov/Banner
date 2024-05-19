@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'files',
+    'users',
+
 
 ]
 
@@ -116,6 +118,8 @@ TIME_ZONE = "Europe/Moscow"
 USE_I18N = True
 
 USE_TZ = True
+# Новая модель users
+AUTH_USER_MODEL = 'users.CustomUsers'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
@@ -140,4 +144,4 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 # авторизация по почте
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_EMAIL_REQUIRED = True
