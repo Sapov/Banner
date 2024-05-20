@@ -25,12 +25,12 @@ class CustomUsers(AbstractUser):
 
 
 class Organisation(models.Model):
-    Contractor = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        verbose_name="ЗАКАЗЧИК!!",
-        default=1,
-    )
+    # Contractor = models.ForeignKey(
+    #     settings.AUTH_USER_MODEL,
+    #     on_delete=models.CASCADE,
+    #     verbose_name="ЗАКАЗЧИК!!",
+    #     default=1,
+    # )
     name_ul = models.CharField(
         max_length=70,
         verbose_name="Имя юр. лица",
