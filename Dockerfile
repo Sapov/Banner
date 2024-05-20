@@ -16,6 +16,7 @@ RUN apt update && apt -qy install gcc libjpeg-dev libxslt-dev \
 # создаем юзера и даем права на доступ
 RUN useradd -rms /bin/bash django && chmod 777 /opt /run
 
+
 #создаем директорию куда все складывать
 WORKDIR /django
 RUN mkdir /django/media
@@ -29,7 +30,7 @@ COPY --chown=django:django . .
 RUN pip install -r requirements.txt
 
 # переключаюсь на пользователя django
-USER django gunicorn
+USER django
 # Запускаю
 CMD ["gunicorn","-b","0.0.0.0:8000","mysite.wsgi:application"]
 
